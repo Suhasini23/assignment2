@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).This project has dark and light theme and generic react component. Next feature will be adding storybook.
 
 ## Available Scripts
 
