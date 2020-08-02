@@ -15,7 +15,8 @@ const colors = {
     cream: "#fdf9de",
     black: "#333333",
     extremeBlack: "#000",
-    yellow : "#FFFF00"
+    yellow: "#FFFF00",
+    lineSeparatorColor: "#d8d8d8",
 
 }
 export default colors;

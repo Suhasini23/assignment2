@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import Header from "../../Components/Header/Header";
 import *  as style from "./__style";
 import { ApplicationContants } from "../../Comman/Contants";
+import ButtonLayout from '../ButtonLayout/ButtonLayout';
 const ThemeWrapper = styled.div(style.__themeSetter);
 
 interface IComponentProps {
@@ -17,9 +18,12 @@ const MainLayout: React.FC<IComponentProps> = props => {
     }
     return (
         // @ts-ignore
-        <ThemeWrapper isDark={isDark}>
-            <Header themeToggler={handleToggle} isDark={isDark} />
-        </ThemeWrapper>
+        <>
+            <ThemeWrapper isDark={isDark}>
+                <Header themeToggler={handleToggle} isDark={isDark} />
+                <ButtonLayout />
+            </ThemeWrapper>
+        </>
 
     )
 };

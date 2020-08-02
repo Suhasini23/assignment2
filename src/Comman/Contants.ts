@@ -33,7 +33,7 @@ const VARIENT_COLOR_MAP = (mapKey: any, { disabled, shadow }) => {
             return {
                 color: disabled ? colors.fadedGrey : colors.primaryColor,
                 backgroundColor: colors.white,
-                boxShadow: `0 3px 16px 0 ${colors.lightGrey40}`
+                boxShadow: `0 3px 16px 0 ${colors.lineSeparatorColor}`
             };
         /* Styles applied to the element if `varient="text"` and `color="default"`. */
         case `${BUTTON_VARIENT.text}${BUTTON_COLOR.default}`:
@@ -75,7 +75,7 @@ const VARIENT_COLOR_MAP = (mapKey: any, { disabled, shadow }) => {
         /* Styles applied to the element if `varient="outlined"` and `color="default"`. */
         case `${BUTTON_VARIENT.outlined}${BUTTON_COLOR.default}`:
             return {
-                color: colors.grey,
+                color: colors.blackThree,
                 border: `1px solid ${colors.lightGrey40}`,
                 ...(shadow
                     ? { boxShadow: `0 3px 16px 0 ${colors.lightGrey40}` }

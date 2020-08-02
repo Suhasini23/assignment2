@@ -66,29 +66,24 @@ const commonButtonStyle = ({
     switch (size) {
         case BUTTON_SIZE.sm:
             sizeStyle = {
-                width: "fit-content",
-                height: "fit-content",
-                padding: "2px"
+                padding: "10px",
+                width: "fit-content"
             };
             break;
         case BUTTON_SIZE.md:
             sizeStyle = {
-                width: "fit-content",
-                height: "fit-content",
-                padding: "10px 7px"
+                padding: "10px 7px",
+                width: "fit-content"
             };
             break;
         case BUTTON_SIZE.lg:
             sizeStyle = {
                 width: "fit-content",
-                height: "fit-content",
                 padding: "15px 30px"
             };
             break;
         default:
             sizeStyle = {
-                width: "fit-content",
-                height: "fit-content",
                 padding: "2px"
             };
             break;
@@ -112,6 +107,7 @@ const commonButtonStyle = ({
         border: "1px solid transparent",
         padding: "6px 12px",
         fontSize: "16px",
+        outline: "none",
         lineHeight: "1.42857143",
         userSelect: "none",
         ...(rounded ? roundedStyle : {}),
