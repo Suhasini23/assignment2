@@ -1,0 +1,16 @@
+export const titleFs = "22px";
+export const subTitleFs = "15px";
+export const accountFont = "26px";
+export const mobileTitleFs = "20px";
+export const mobileSubTitleFs = "14px";
+export const mobileAccountFont = "18px";
+export const productTitleFs = "16px";
+export const priceRowMobileFs = "14px";
+export const mobileSmallText = "12px";
+export const footerHeight = "50px";
+export const paddingDesktop = "24px";
+export const mobileHeaderHeightWithTab = "89px";
+export const mobileHeaderHeightWithoutTab = "50px";
+export const gutterWidthMd = "24px";
+export const gutterWidthSm = "16px";
+export const halfGutterWidthSm = "8px";
