@@ -1,66 +1,123 @@
-// import styled from "@emotion/styled";
-// import * as React from "react";
-// import { BUTTON_COLOR, BUTTON_VARIENT } from "./constants";
+import { BUTTON_VARIENT, getVarientColorStyle, BUTTON_SIZE } from '../../Comman/Contants';
+import colors from '../../Comman/commanUtils/color';
 
-// import { __button } from "./__style";
+export const __button = (props = {}) => ({
+    // @ts-ignore
+    ...commonButtonStyle(props),
+    // @ts-ignore
+    ...getVarientColorStyle(props),
+    // @ts-ignore
+    ...(props.shadow ? {} : { boxShadow: "none" }),
+    // @ts-ignore
+    ...props.customStyle
+});
 
-// import { IButton } from "./interface";
+const commonButtonStyle = ({
+    // @ts-ignore
+    varient,
+    // @ts-ignore      
+    size,
+    // @ts-ignore     
+    color,
+    // @ts-ignore              
+    disabled,
+    // @ts-ignore               
+    displayDisableStyle,
+    // @ts-ignore           
+    shadow,
+    // @ts-ignore   
+    rounded
+}) => {
+    const isDisabled = disabled || displayDisableStyle;
 
-// const Button = styled.button<IButton>(__button);
+    let buttonBaseStyle = {},
+        varientStyle = {},
+        roundedStyle = {},
+        sizeStyle = {}
 
-// const ButtonWrapper: React.FC<IButton> = props => {
-//   const {
-//       children,
-//       onClick,
-//       disabled,
-//       displayDisableStyle = false,
-//       varient = BUTTON_VARIENT.default,
-//       color = BUTTON_COLOR.default,
-//       customStyle = {},
-//       rounded = false,
-//       shadow = true,
-//       stopPropagation = false,
-//       preventDefault = true
-//     } = props,
-//     onButtonClick = (e: React.MouseEvent) => {
-//       preventDefault && e.preventDefault();
-//       stopPropagation && e.stopPropagation();
+    switch (varient) {
+        case BUTTON_VARIENT.text:
+            varientStyle = {
+                backgroundColor: colors.white
+            };
+            break;
+        case BUTTON_VARIENT.contained:
+            varientStyle = {
+                color: colors.white,
+                backgroundImage: `linear-gradient(99deg, ${colors.primaryColor}, ${colors.white})`,
+                boxShadow: "0 3px 16px 0 rgba(247, 123, 155, 0.71)"
+            };
+            break;
+        case BUTTON_VARIENT.outlined:
+            varientStyle = {
+                border: `1px solid ${colors.fadedGrey}`,
+                backgroundColor: colors.white
+            };
+            break;
+        default:
+            varientStyle = {
+                backgroundColor: colors.white,
+                borderColor: "#ccc"
+            };
+            break;
+    }
 
-//       onClick && !disabled && onClick(e);
-//     };
 
-//   return (
-//     <Button
-//       varient={varient}
-//       color={color}
-//       customStyle={customStyle}
-//       disabled={disabled}
-//       onClick={onButtonClick}
-//       rounded={rounded}
-//       shadow={shadow}
-//       displayDisableStyle={displayDisableStyle}
-//     >
-//       {children}
-//     </Button>
-//   );
-// };
+    switch (size) {
+        case BUTTON_SIZE.sm:
+            sizeStyle = {
+                width: "fit-content",
+                height: "fit-content",
+                padding: "2px"
+            };
+            break;
+        case BUTTON_SIZE.md:
+            sizeStyle = {
+                width: "fit-content",
+                height: "fit-content",
+                padding: "10px 7px"
+            };
+            break;
+        case BUTTON_SIZE.lg:
+            sizeStyle = {
+                width: "fit-content",
+                height: "fit-content",
+                padding: "15px 30px"
+            };
+            break;
+        default:
+            sizeStyle = {
+                width: "fit-content",
+                height: "fit-content",
+                padding: "2px"
+            };
+            break;
+    }
 
-// export default ButtonWrapper;
-// export { BUTTON_COLOR, BUTTON_VARIENT } from "./constants";
+    roundedStyle = {
+        padding: "6px 24px",
+        borderRadius: "30px"
+    };
 
-import React from "react";
-import styled from "@emotion/styled";
-import * as commanStyles from "../../Comman/__commanStyles"
-const ContainerWrapper = styled.div(commanStyles.__container);
+    buttonBaseStyle = {
+        display: "inline-block",
+        marginBottom: "0",
+        fontWeight: "bold",
+        textAlign: "center",
+        whiteSpace: "nowrap",
+        verticalAlign: "middle",
+        touchAction: "manipulation",
+        cursor: isDisabled ? "default" : "pointer",
+        backgroundImage: "none",
+        border: "1px solid transparent",
+        padding: "6px 12px",
+        fontSize: "16px",
+        lineHeight: "1.42857143",
+        userSelect: "none",
+        ...(rounded ? roundedStyle : {}),
+        ...varientStyle,
+        ...sizeStyle
+    };
 
-interface IComponentProps {
-}
-const MainLayout: React.FC<IComponentProps> = props => {
-    return (
-        // @ts-ignore
-        <ContainerWrapper>
-            <h1>Dark</h1>
-        </ContainerWrapper>
-    )
+    return buttonBaseStyle;
 };
-export default MainLayout;
