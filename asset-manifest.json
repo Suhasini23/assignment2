@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/assignment2/static/css/main.5f361e03.chunk.css",
+    "main.js": "/assignment2/static/js/main.3749d15a.chunk.js",
+    "main.js.map": "/assignment2/static/js/main.3749d15a.chunk.js.map",
+    "runtime-main.js": "/assignment2/static/js/runtime-main.3ff15eed.js",
+    "runtime-main.js.map": "/assignment2/static/js/runtime-main.3ff15eed.js.map",
+    "static/js/2.7ea592bf.chunk.js": "/assignment2/static/js/2.7ea592bf.chunk.js",
+    "static/js/2.7ea592bf.chunk.js.map": "/assignment2/static/js/2.7ea592bf.chunk.js.map",
+    "index.html": "/assignment2/index.html",
+    "precache-manifest.ac81126a2eb1835c0b6bd663d1614989.js": "/assignment2/precache-manifest.ac81126a2eb1835c0b6bd663d1614989.js",
+    "service-worker.js": "/assignment2/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/assignment2/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.7ea592bf.chunk.js.LICENSE.txt": "/assignment2/static/js/2.7ea592bf.chunk.js.LICENSE.txt",
+    "static/media/active.svg": "/assignment2/static/media/active.5ea8519c.svg",
+    "static/media/disabledImg.svg": "/assignment2/static/media/disabledImg.42fafb33.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ff15eed.js",
+    "static/js/2.7ea592bf.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.3749d15a.chunk.js"
+  ]
+}
